@@ -1,0 +1,69 @@
+@import "normalize.css";
+@import "stylesheet.css";
+
+
+
+html|* > svg {
+    -webkit-transform-origin: 50% 50% 0px;
+}
+
+body {
+    font-family: 'Station Medium';
+    background-color: #F0EEB5;
+    color: #312F2D;
+    font-size: 16px;
+}
+
+#label-scope-top {
+    width: 100%;
+    text-align: center;
+    color: #C1BF86;
+    margin-top: 2em;
+
+
+}
+
+#labels-center {
+    height: 84px;
+    top: 50%;
+    margin-top: - 84px / 2;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+
+    #label-level {
+
+    }
+
+    #label-scope {
+        font-size: 2em;
+        color: #1E8CC3
+    }
+
+    #label-bonus {
+        font-size: .8em;
+    }
+}
+
+#game {
+    cursor: pointer;
+    z-index: 9999999;
+    margin: 0px;
+
+    position: absolute;
+
+    height: 506px;
+    width: 285px;
+    top: 0;
+    left: 0;
+
+    .drop {
+        fill: none;
+        stroke-linecap: round;
+    }
+
+    .ball {
+
+    }
+}
+

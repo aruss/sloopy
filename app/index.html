@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Sloopy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+
+        <div id="label-scope-top">Best <span>700</span></div>
+
+        <div id="labels-center">
+            <div id="label-level">1</div>
+            <div id="label-scope">520</div>
+            <div id="label-bonus">+50</div>
+        </div>
+
+        <svg id="game" class="game" xmlns="http://www.w3.org/2000/svg" >
+			<path id="drop" class="drop" d="M142.5,139 A114,114 0 0,1 255.390559836539,237.13426649055253" transform="rotate(103 142.5 253)" stroke="#1E8CC3" stroke-width="30"></path>
+			<circle id="ball" class="ball" fill="#123456" r="10" cx="142.5" cy="139" transform="rotate(10 142.5 253)"></circle>
+		</svg>
+
+
+        <!-- build:js scripts/vendor.js -->
+
+        <!-- bower:js -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+		<script src="scripts/jquery-2.1.3.min.js"></script>
+        <script src="scripts/math2.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <script>
+            var game = new GAME.Game();
+
+            $(window).on("resize", function() { 
+                game.run();
+            });
+
+            $(window).on("mousedown", function(event){
+                event.preventDefault();
+                game.action();
+            });
+
+            game.run();
+
+        </script>
+</body>
+</html>
